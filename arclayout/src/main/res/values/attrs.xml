@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ArcHeader">
+
+        <attr name="arc_bottom_height" format="dimension"/>
+        <attr name="arc_top_height" format="dimension"/>
+
+
+        <attr name="arc_top_cropCurve" format="enum">
+            <enum name="cropConvex" value="1"/>
+            <enum name="cropConcave" value="2"/>
+        </attr>
+
+        <attr name="arc_bottom_cropCurve" format="enum">
+            <enum name="cropConvex" value="1"/>
+            <enum name="cropConcave" value="2"/>
+        </attr>
+
+        <attr name="arc_top_position" format="boolean"/>
+        <attr name="arc_bottom_position" format="boolean"/>
+
+    </declare-styleable>
+</resources>
