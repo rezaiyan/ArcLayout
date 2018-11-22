@@ -1,13 +1,12 @@
-package ir.alirezaiyan.arclayout
+package ir.alirezaiyan.arclayout.sample
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import ir.alirezaiyan.arclayout.model.ListContent
-import kotlinx.android.synthetic.main.activity_detail.*
-import kotlinx.android.synthetic.main.item_detail.view.*
+import ir.alirezaiyan.arclayout.sample.model.ListContent
+import kotlinx.android.synthetic.main.activity_detail_toolbar.*
+import kotlinx.android.synthetic.main.item_detail.*
 
 class DetailFragment : Fragment() {
 
@@ -31,16 +30,14 @@ class DetailFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
-        val rootView = inflater.inflate(R.layout.item_detail, container, false)
+                              savedInstanceState: Bundle?) = inflater.inflate(R.layout.item_detail, container, false)
 
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
         // Show the model content as text in a TextView.
-        item?.let {
-            rootView.item_detail.text = it.details
-        }
-
-        return rootView
+        item_detail.text = item?.details
     }
+
 
     companion object {
         /**

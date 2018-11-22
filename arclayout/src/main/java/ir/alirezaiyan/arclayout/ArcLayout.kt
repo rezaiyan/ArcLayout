@@ -6,14 +6,14 @@ import android.graphics.Outline
 import android.graphics.Path
 import android.os.Build
 import android.support.annotation.RequiresApi
+import android.support.design.widget.AppBarLayout
 import android.support.v4.view.ViewCompat
 import android.util.AttributeSet
 import android.util.Log
 import android.view.View
 import android.view.ViewOutlineProvider
-import android.widget.RelativeLayout
 
-class ArcLayout : RelativeLayout {
+class ArcLayout : AppBarLayout {
 
     lateinit var settings: ArcLayoutSettings
 

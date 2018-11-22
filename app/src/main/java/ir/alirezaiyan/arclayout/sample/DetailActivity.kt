@@ -1,23 +1,23 @@
-package ir.alirezaiyan.arclayout
+package ir.alirezaiyan.arclayout.sample
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
-import kotlinx.android.synthetic.main.activity_detail.*
+import ir.alirezaiyan.arclayout.sample.model.ARC_TOOLBAR_ID
+import ir.alirezaiyan.arclayout.sample.model.ListContent
+import kotlinx.android.synthetic.main.activity_detail_toolbar.*
 
 class DetailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detail)
+        val listItem = intent.getParcelableExtra<ListContent.ListItem>(DetailFragment.ARG_ITEM_ID)
+        val layout = if (listItem.id == ARC_TOOLBAR_ID) R.layout.activity_detail_toolbar else R.layout.activity_detail_bottom_navigation
+        setContentView(layout)
         setSupportActionBar(detail_toolbar)
+        title = listItem.content
 
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own detail action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
-        }
 
         // Show the Up button in the action bar.
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -36,8 +36,7 @@ class DetailActivity : AppCompatActivity() {
             // using a fragment transaction.
             val fragment = DetailFragment().apply {
                 arguments = Bundle().apply {
-                    title = intent.getStringExtra(DetailFragment.ARG_ITEM_ID)
-                    putString(DetailFragment.ARG_ITEM_ID, title.toString())
+                    putInt(DetailFragment.ARG_ITEM_ID, listItem.id)
                 }
             }
 
@@ -45,6 +44,7 @@ class DetailActivity : AppCompatActivity() {
                     .add(R.id.item_detail_container, fragment)
                     .commit()
         }
+
     }
 
     override fun onOptionsItemSelected(item: MenuItem) =

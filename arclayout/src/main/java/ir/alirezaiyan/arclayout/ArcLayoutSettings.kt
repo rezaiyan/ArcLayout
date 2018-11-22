@@ -7,9 +7,9 @@ import android.util.TypedValue
 
 class ArcLayoutSettings internal constructor(context: Context, attrs: AttributeSet?) {
 
-    var isTopCropConvex = true
-    var isBottomCropConvex = true
-    var isDirectionBottom = true
+    var isTopCropConvex = false
+    var isBottomCropConvex = false
+    var isDirectionBottom = false
     var isDirectionTop = false
     val bottomArcHeight: Float
     val topArcHeight: Float
@@ -26,8 +26,8 @@ class ArcLayoutSettings internal constructor(context: Context, attrs: AttributeS
         val bottomCropDirection = styledAttributes.getInt(R.styleable.ArcHeader_arc_bottom_cropCurve, CROP_CONVEX)
         isBottomCropConvex = bottomCropDirection and CROP_CONVEX == CROP_CONVEX
 
-        val arcBottomPosition = styledAttributes.getInt(R.styleable.ArcHeader_arc_bottom_position, DIRECTION_BOTTOM)
-        val arcTopPosition = styledAttributes.getInt(R.styleable.ArcHeader_arc_top_position, DIRECTION_TOP)
+        val arcBottomPosition = styledAttributes.getInt(R.styleable.ArcHeader_arc_bottom_position, -1)
+        val arcTopPosition = styledAttributes.getInt(R.styleable.ArcHeader_arc_top_position, -1)
         isDirectionBottom = arcBottomPosition and DIRECTION_BOTTOM == DIRECTION_BOTTOM
         isDirectionTop = arcTopPosition and DIRECTION_TOP == DIRECTION_TOP
 

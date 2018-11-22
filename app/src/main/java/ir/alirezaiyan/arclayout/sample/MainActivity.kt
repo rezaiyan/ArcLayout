@@ -1,4 +1,4 @@
-package ir.alirezaiyan.arclayout
+package ir.alirezaiyan.arclayout.sample
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,11 +8,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-
-import ir.alirezaiyan.arclayout.model.ListContent
+import ir.alirezaiyan.arclayout.sample.model.ListContent
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.item_list_content.view.*
 import kotlinx.android.synthetic.main.item_list.*
+import kotlinx.android.synthetic.main.item_list_content.view.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -58,7 +57,7 @@ class MainActivity : AppCompatActivity() {
                 if (twoPane) {
                     val fragment = DetailFragment().apply {
                         arguments = Bundle().apply {
-                            putString(DetailFragment.ARG_ITEM_ID, item.content)
+                            putParcelable(DetailFragment.ARG_ITEM_ID, item)
                         }
                     }
                     parentActivity.supportFragmentManager
@@ -67,7 +66,7 @@ class MainActivity : AppCompatActivity() {
                             .commit()
                 } else {
                     val intent = Intent(v.context, DetailActivity::class.java).apply {
-                        putExtra(DetailFragment.ARG_ITEM_ID, item.content)
+                        putExtra(DetailFragment.ARG_ITEM_ID, item)
                     }
                     v.context.startActivity(intent)
                 }
