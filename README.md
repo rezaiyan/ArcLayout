@@ -3,6 +3,14 @@
 Arc Layout is a view group with which you can add a arc-shaped container in your layout.
 Two main variables are the direction and the curvature of the arc. Check the example below.
 
+<p float="left">
+<img src="https://raw.githubusercontent.com/rezaiyan/ArcLayout/master/sc/bottomNavigation.png" height="500">
+
+<img src="https://raw.githubusercontent.com/rezaiyan/ArcLayout/master/sc/toolbar2.png" height="500">
+
+<img src="https://raw.githubusercontent.com/rezaiyan/ArcLayout/master/sc/toolbar.png" height="500">
+</p>
+
 # Usage
 
 ```groovy
