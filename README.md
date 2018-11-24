@@ -40,7 +40,7 @@ Add the dependency to your app build.gradle file
 ```
 dependencies
 {
-    implementation 'com.github.rezaiyan:arclayout:1.0.0'
+    implementation 'com.github.rezaiyan:arclayout:1.0.1'
 }
 ```
 
