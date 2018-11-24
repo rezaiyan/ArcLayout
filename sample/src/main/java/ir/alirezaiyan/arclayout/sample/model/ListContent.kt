@@ -13,6 +13,7 @@ import java.util.*
 
 const val ARC_BOTTOM_NAVIGATION_ID = 1
 const val ARC_TOOLBAR_ID = 2
+
 object ListContent {
 
     val bnvDetails = "BottomNavigationView\n" +
@@ -68,13 +69,13 @@ object ListContent {
 
     init {
         // Add some sample items.
-        addItem(ListItem(id = ARC_BOTTOM_NAVIGATION_ID, content = "Arc Bottom navigation", details = bnvDetails))
-        addItem(ListItem(id = ARC_TOOLBAR_ID, content = "Arc Toolbar", details = toolbarDetails))
+        addItem(ListItem(id = ARC_BOTTOM_NAVIGATION_ID, content = "ArcBottomNavigation", details = bnvDetails))
+        addItem(ListItem(id = ARC_TOOLBAR_ID, content = "ArcToolbar", details = toolbarDetails))
     }
 
     private fun addItem(item: ListItem) {
         ITEMS.add(item)
-        ITEM_MAP.put(item.id, item)
+        ITEM_MAP[item.id] = item
     }
 
 

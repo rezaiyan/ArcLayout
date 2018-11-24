@@ -54,7 +54,7 @@
             android:layout_height="match_parent" />
 
 
-        <ir.alirezaiyan.arclayout.ArcLayout
+        <ir.alirezaiyan.arclayout.ArcRelativeLayout
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_alignParentBottom="true"
@@ -129,7 +129,7 @@
                     tools:ignore="ContentDescription" />
             </LinearLayout>
 
-        </ir.alirezaiyan.arclayout.ArcLayout>
+        </ir.alirezaiyan.arclayout.ArcRelativeLayout>
 
     </RelativeLayout>
 

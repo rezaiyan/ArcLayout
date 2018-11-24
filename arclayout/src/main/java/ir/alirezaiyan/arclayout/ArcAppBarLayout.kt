@@ -12,8 +12,9 @@ import android.util.AttributeSet
 import android.util.Log
 import android.view.View
 import android.view.ViewOutlineProvider
+import ir.alirezaiyan.arclayout.utils.ArcLayoutSettings
 
-class ArcLayout : AppBarLayout {
+class ArcAppBarLayout : AppBarLayout {
 
     lateinit var settings: ArcLayoutSettings
 
@@ -140,6 +141,6 @@ class ArcLayout : AppBarLayout {
     }
 
     companion object {
-        private val TAG = "ArcLayout"
+        private val TAG = "ArcRelativeLayout"
     }
 }

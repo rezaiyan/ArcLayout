@@ -46,7 +46,7 @@ dependencies
 
 ```xml
 
- <ir.alirezaiyan.arclayout.ArcLayout
+ <ir.alirezaiyan.arclayout.ArcRelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:arc_bottom_cropCurve="cropConcave|cropConvex"
@@ -58,7 +58,7 @@ dependencies
 
         <!-- YOUR CONTENT -->
 
-    </ir.alirezaiyan.arclayout.ArcLayout>
+    </ir.alirezaiyan.arclayout.ArcRelativeLayout>
 
 ```
 

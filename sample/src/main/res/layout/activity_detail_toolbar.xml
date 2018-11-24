@@ -8,7 +8,7 @@
     tools:context=".DetailActivity"
     tools:ignore="MergeRootFrame">
 
-    <ir.alirezaiyan.arclayout.ArcLayout
+    <ir.alirezaiyan.arclayout.ArcAppBarLayout
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/app_bar_height"
@@ -40,7 +40,7 @@
 
         </android.support.design.widget.CollapsingToolbarLayout>
 
-    </ir.alirezaiyan.arclayout.ArcLayout>
+    </ir.alirezaiyan.arclayout.ArcAppBarLayout>
 
     <android.support.v4.widget.NestedScrollView
         android:id="@+id/item_detail_container"
@@ -49,13 +49,13 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
+        android:id="@+id/github_fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical|start"
         android:layout_margin="@dimen/fab_margin"
         app:layout_anchor="@+id/item_detail_container"
         app:layout_anchorGravity="top|end"
-        app:srcCompat="@android:drawable/btn_star" />
+        app:srcCompat="@drawable/ic_github" />
 
 </android.support.design.widget.CoordinatorLayout>

@@ -1,14 +1,13 @@
-apply plugin: 'com.novoda.bintray-release'
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'com.github.dcendents.android-maven'
+group = 'com.github.rezaiyan'
 
-group='com.github.YourUsername'
 android {
     compileSdkVersion 28
 
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 14
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -30,18 +29,4 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.android.support:design:28.0.0'
-}
-Properties properties = new Properties()
-properties.load(project.rootProject.file('local.properties').newDataInputStream())
-
-publish {
-    bintrayUser = properties.getProperty("bintray.user")
-    bintrayKey = properties.getProperty("bintray.apikey")
-    userOrg = 'rezaiyan'
-    repoName = 'maven'
-    groupId = 'ir.alirezaiyan'
-    artifactId = 'ArcLayout'
-    publishVersion = '1.0.0'
-    desc = 'Arc Layout is a view group with which you can add a arc-shaped container in your layout.'
-    website = 'https://github.com/rezaiyan/ArcLayout'
 }

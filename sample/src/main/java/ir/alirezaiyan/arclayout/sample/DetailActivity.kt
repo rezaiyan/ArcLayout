@@ -1,14 +1,16 @@
 package ir.alirezaiyan.arclayout.sample
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
+import android.view.View
 import ir.alirezaiyan.arclayout.sample.model.ARC_TOOLBAR_ID
 import ir.alirezaiyan.arclayout.sample.model.ListContent
 import kotlinx.android.synthetic.main.activity_detail_toolbar.*
 
-class DetailActivity : AppCompatActivity() {
+class DetailActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,7 +19,7 @@ class DetailActivity : AppCompatActivity() {
         setContentView(layout)
         setSupportActionBar(detail_toolbar)
         title = listItem.content
-
+        github_fab?.setOnClickListener(this)
 
         // Show the Up button in the action bar.
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -61,4 +63,15 @@ class DetailActivity : AppCompatActivity() {
                 }
                 else -> super.onOptionsItemSelected(item)
             }
+
+
+    override fun onClick(v: View?) {
+        when (v?.id) {
+            R.id.github_fab -> {
+                val repo = Intent(Intent.ACTION_VIEW)
+                repo.data = Uri.parse("https://github.com/rezaiyan/ArcLayout")
+                startActivity(repo)
+            }
+        }
+    }
 }

@@ -1,8 +1,9 @@
-package ir.alirezaiyan.arclayout
+package ir.alirezaiyan.arclayout.utils
 
 import android.content.Context
 import android.util.AttributeSet
 import android.util.TypedValue
+import ir.alirezaiyan.arclayout.R
 
 
 class ArcLayoutSettings internal constructor(context: Context, attrs: AttributeSet?) {
@@ -35,8 +36,6 @@ class ArcLayoutSettings internal constructor(context: Context, attrs: AttributeS
     }
 
     companion object {
-        private val TAG = "ArcLayoutSettings"
-
         val CROP_CONVEX = 1
         val CROP_CONCAVE = 2
         val DIRECTION_BOTTOM = 1
