@@ -1,7 +1,9 @@
 apply plugin: 'com.novoda.bintray-release'
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
+apply plugin: 'com.github.dcendents.android-maven'
 
+group='com.github.YourUsername'
 android {
     compileSdkVersion 28
 
