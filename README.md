@@ -1,3 +1,6 @@
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![](https://jitpack.io/v/rezaiyan/ArcLayout.svg)](https://jitpack.io/#rezaiyan/ArcLayout)
+
 # ArcLayout
 
 Arc Layout is a view group with which you can add a arc-shaped container in your layout.
@@ -11,10 +14,34 @@ Two main variables are the direction and the curvature of the arc. Check the exa
 <img src="https://raw.githubusercontent.com/rezaiyan/ArcLayout/master/sc/toolbar.png" height="500">
 </p>
 
-# Usage
+## Usage
 
-```groovy
-    implementation 'ir.alirezaiyan:arclayout:1.0.0'
+By this instructions you can add this library and i will explain how use it.
+
+
+
+### Add Maven to your root build.gradle
+
+First of all Add it in your root build.gradle at the end of repositories:
+
+```
+allprojects {
+  repositories {
+    ...
+    maven { url 'https://jitpack.io' }
+  }
+}
+```
+
+### Add Dependency
+
+Add the dependency to your app build.gradle file
+
+```
+dependencies
+{
+    implementation 'com.github.rezaiyan:arclayout:1.0.0'
+}
 ```
 
 ```xml
