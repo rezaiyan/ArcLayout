@@ -16,13 +16,13 @@ Two main variables are the direction and the curvature of the arc. Check the exa
 
 ## Usage
 
-By this instructions you can add this library and i will explain how use it.
+By this instructions you can add this library and I will explain how use it.
 
 
 
 ### Add Maven to your root build.gradle
 
-First of all Add it in your root build.gradle at the end of repositories:
+First of all, Add it to your root `build.gradle` at the end of repositories:
 
 ```
 allprojects {
@@ -35,7 +35,7 @@ allprojects {
 
 ### Add Dependency
 
-Add the dependency to your app build.gradle file
+Add the dependency to your app `build.gradle` file:
 
 ```
 dependencies
